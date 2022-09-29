@@ -1,14 +1,120 @@
 <!DOCTYPE html>
-<html>
+<html lang="hu">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css" media="screen">
+    <script src="src/index.js"></script>
+    <title>Digitális Képkeret</title>
+    <style>
+#urls
+{
+    color: black;
+    background-color: rgb(55, 255, 20);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+#header
+{
+    color: black;
+    background-color: rgb(55, 255, 20);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-style: italic;
+}
+
+
+#megjelenit
+{
+    width: 120px;
+    margin-left: 25px;
+}
+
+
+#kep
+{
+    max-width: 1200px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.input{
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    text-align: center;
+}
+
+.boots
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(55, 255, 20);
+}
+
+body {
+    padding: 25px;
+    background-color: rgb(55, 255, 20);
+    color: black;
+    font-size: 25px;
+  }
+  
+.dark-mode{
+    background-color: black;
+    color: white;
+  }
+
+  footer{
+    position: fixed;
+    bottom: 0;
+    
+  }
+    </style>
 </head>
 <body>
-    <p>This is a template</p>    
-    <script src='main.js'></script>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" id="header">
+                <h1>Digitális Képkeret </h1>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-3" id="urls">
+            <p>Kép URL-je</p>
+            <input class="input" type="url" id="url" placeholder="https://example.com">                                                                                                       
+            </div>
+            <div class="col-md-3 boots">
+            <p>Kép széllesége Pixelben megadva </p>
+            <input class="input" id="width" type="number" max="1200" step="20" min="100">
+            </div>
+            <div class="col-md-3 boots" >
+            <p>Keret vastagsága</p>
+            <input class="input" id="border" type="number" min="0">
+            </div>
+            <div class="col-md-3 boots">
+            <p>Kép keret szine </p>
+            <input class="input" id="color" type="color"> 
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-12">
+                <img id="kep" class="center" src="" alt="" srcset="">
+            </div>
+<br>
+    </div>
+
+    <footer>
+        Krity Lőrinc 14/S
+        <button type="button" id="toggleMode">fekete/feher</button>
+    </footer>
 </body>
 </html>
